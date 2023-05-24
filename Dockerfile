@@ -19,3 +19,4 @@ COPY --from=build /app/DockerAspNet48/. ./
 
 COPY DockerAspNet48/Font/. ./Font/
 RUN .\Font\InstallFont.ps1
+RUN .\Font\AddFonts.ps1

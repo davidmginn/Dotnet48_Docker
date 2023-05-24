@@ -1,10 +1,2 @@
-﻿$FONTS = 0x14
-$FONTS
-$objShell = New-Object -ComObject Shell.Application
-$objShell
-$objFolder = $objShell.Namespace($FONTS)
-
-$objFolder.CopyHere("FrederickatheGreat-Regular.ttf")
-
-[System.Reflection.Assembly]::LoadWithPartialName("System.Drawing")
-(New-Object System.Drawing.Text.InstalledFontCollection).Families
+﻿COPY Font/FrederickatheGreat-Regular.ttf c:/windows/fonts/FrederickatheGreat-Regular.ttf
+New-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts' -Name 'Fredericka the Great (TrueType)' -PropertyType String -Value FrederickatheGreat-Regular.ttf
