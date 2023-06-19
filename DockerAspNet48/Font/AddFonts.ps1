@@ -34,3 +34,8 @@ foreach($font in $(gci C:\Windows\Fonts))
         [FontResource.AddRemoveFonts]::AddFont($font.FullName) | Out-Null
     }
 }
+
+[void] [System.Reflection.Assembly]::LoadWithPartialName("System.Drawing")
+(New-Object System.Drawing.Text.InstalledFontCollection).Families
+
+C:\ServiceMonitor.exe w3svc

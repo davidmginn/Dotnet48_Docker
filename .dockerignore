@@ -3,6 +3,9 @@
 **/bin/
 **/obj/
 **/out/
+**/Offline/*
+
+!/Offline/Windows/WinSxS/
 
 # files
 Dockerfile*
